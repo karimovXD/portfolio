@@ -1,0 +1,5 @@
+mikhail nepom: images next, and optimase red group;
+memo useMemo
+responsive navbar and fix theme
+not found
+right brauzer overflow auto
