@@ -20,11 +20,6 @@ const NavbarItem: React.FC = () => {
         href: "/projects",
         label: "Projects",
       },
-      {
-        value: "/contact",
-        href: "/contact",
-        label: "Contact",
-      },
     ],
     []
   );

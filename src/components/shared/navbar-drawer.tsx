@@ -35,11 +35,6 @@ const NavbarDrawer: React.FC<PropsType> = ({ className }) => {
         href: "/projects",
         label: "Projects",
       },
-      {
-        value: "/contact",
-        href: "/contact",
-        label: "Contact",
-      },
     ],
     []
   );

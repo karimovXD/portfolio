@@ -1,17 +1,49 @@
 import React from "react";
-import Image from "next/image";
-//shadcn
-import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import ProjectCard from "@/components/shared/project-card";
+import { Metadata } from "next";
 
-const page: React.FC = () => {
+export const metadata: Metadata = {
+  title: "ISA - Projects",
+  description: "watch my projects and and more :)",
+};
+
+const Page: React.FC = () => {
+  const projectOptionsMemo = React.useMemo(
+    () => [
+      {
+        title: "Weather app",
+        skills: ["next", "ts", "tailwind"],
+        websiteImage: "/weather-app.png",
+        href: "https://weather-app-two-one.vercel.app/",
+      },
+      {
+        title: "React Pizza",
+        skills: ["react", "ts", "redux", "scss", "tailwind", "vite"],
+        websiteImage: "/react-pizza.png",
+        href: "https://react-pizza-two-one.vercel.app/",
+      },
+      {
+        title: "CRUD",
+        skills: ["react", "ts", "scss", "tailwind", "vite"],
+        websiteImage: "/crud.png",
+        href: "https://crud-lilac-psi.vercel.app/",
+      },
+      {
+        title: "Netflix",
+        skills: ["react", "scss", "tailwind", "vite"],
+        websiteImage: "/netflix.png",
+        href: "https://chipper-chaja-412c30.netlify.app/",
+      },
+      {
+        title: "Rest Countries",
+        skills: ["react", "scss", "tailwind", "vite"],
+        websiteImage: "/rest-countries.png",
+        href: "https://rest-countries-henna.vercel.app/",
+      },
+    ],
+    []
+  );
+
   return (
     <div className="min-h-svh h-auto dark:bg-[#020817] bg-white dark:bg-grid-small-white/[0.2] relative bg-grid-small-black/[0.2]">
       <div className="absolute pointer-events-none inset-0 flex items-center justify-center dark:bg-[#020817] bg-white [mask-image:radial-gradient(ellipse_at_center,transparent_20%,black)]"></div>
@@ -27,39 +59,22 @@ const page: React.FC = () => {
             you
           </h3>
         </div>
-        <div>
-          <Card className="w-[350px]">
-            <CardHeader>
-              <CardTitle className="mb-2 ">React Pizza</CardTitle>
-              <CardDescription>
-                <img
-                  src="https://skillicons.dev/icons?i=react,ts,redux,scss,tailwind,vite"
-                  alt=""
-                />
-              </CardDescription>
-            </CardHeader>
-            <CardContent>
-              <Image
-                src="/react-pizza-project.jpg"
-                alt="react-pizza"
-                width={300}
-                height={200}
+        <div className="flex items-start justify-center flex-wrap gap-5">
+          {projectOptionsMemo.map((item, i) => {
+            return (
+              <ProjectCard
+                key={i}
+                title={item.title}
+                skills={item.skills}
+                websiteImage={item.websiteImage}
+                href={item.href}
               />
-            </CardContent>
-            <CardFooter className="flex justify-between">
-              <a
-                target="_blank"
-                href="https://react-pizza-two-one.vercel.app/"
-                className="border w-full"
-              >
-                <Button className="w-full">Project Link</Button>
-              </a>
-            </CardFooter>
-          </Card>
+            );
+          })}
         </div>
       </div>
     </div>
   );
 };
 
-export default page;
+export default Page;

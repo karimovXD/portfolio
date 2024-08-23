@@ -1,11 +1,9 @@
 import React from "react";
 
-const Skill: React.FC<{ url: string }> = ({ url }) => {
-  return (
-    <div className="flex flex-col items-center justify-center gap-2">
-      <img src={`https://skillicons.dev/icons?i=${url}`} className="w-14 h-auto" alt="" />
-    </div>
-  );
-};
+const Skill: React.FC<{ techStach: string }> = ({ techStach }) => (
+  <span className="border px-5 py-2 rounded-lg bg-slate-50 dark:bg-[#030712]">
+    {techStach}
+  </span>
+);
 
 export default React.memo(Skill);
