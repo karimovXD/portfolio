@@ -5,6 +5,7 @@ import {
   IconBrandTelegram,
   IconBrandLinkedin,
   IconMail,
+  IconPhone,
 } from "@tabler/icons-react";
 
 interface PropsType {
@@ -20,7 +21,6 @@ const Footer: React.FC<PropsType> = ({ className }) => {
       ),
       href: "https://www.linkedin.com/in/iskandar-karimov-900512265/",
     },
-
     {
       title: "Github",
       icon: (
@@ -39,6 +39,13 @@ const Footer: React.FC<PropsType> = ({ className }) => {
       title: "leftr2053@gmail.com",
       icon: (
         <IconMail className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#",
+    },
+    {
+      title: "+998(90)004-56-43",
+      icon: (
+        <IconPhone className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
       href: "#",
     },
