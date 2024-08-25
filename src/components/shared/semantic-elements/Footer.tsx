@@ -19,7 +19,7 @@ const Footer: React.FC<PropsType> = ({ className }) => {
       icon: (
         <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
       ),
-      href: "https://www.linkedin.com/in/iskandar-karimov-900512265/",
+      href: "https://www.linkedin.com/in/iskandar-karimov-203a96321/",
     },
     {
       title: "Github",
